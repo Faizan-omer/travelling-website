@@ -2,16 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { navbarLinks } from "../../constants/navbar.links";
 
-const Navbar = () => {
+const Navbar = ({ renderBg }) => {
   return (
-    <div className="flex w-full">
+    <div className={`flex w-full ${renderBg ? "text-white" : "text-black"}`}>
       <div className="flex justify-start w-full">
-        <p className="text-xl text-slate-200 font-bold">Travely</p>
+        <p
+          className={`text-xl ${renderBg ? "text-slate-200" : "text-lime-900"} font-bold`}
+        >
+          Travely
+        </p>
       </div>
       <div className="flex justify-center w-full">
         {navbarLinks.map((link) => (
           <p
-            className="text-sm text-white mx-6 whitespace-nowrap 
+            className="text-sm mx-6 whitespace-nowrap 
             hover:cursor-pointer hover:font-bold hover:underline 
             hover:underline-offset-4"
             key={link.key}
@@ -21,7 +25,7 @@ const Navbar = () => {
         ))}
       </div>
       <div className="flex justify-end w-full">
-        <p className="text-white">Logout</p>
+        <p>Logout</p>
       </div>
     </div>
   );
