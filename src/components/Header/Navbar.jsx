@@ -1,5 +1,6 @@
 import React from "react";
-import { NAVBAR_LINKS } from "../../constants/navbar.links";
+import { Link } from "react-router-dom";
+import { navbarLinks } from "../../constants/navbar.links";
 
 const Navbar = () => {
   return (
@@ -8,9 +9,14 @@ const Navbar = () => {
         <p className="text-xl text-slate-200 font-bold">Travely</p>
       </div>
       <div className="flex justify-center w-full">
-        {NAVBAR_LINKS.map((link) => (
-          <p className="text-sm text-white px-2" key={link}>
-            {link}
+        {navbarLinks.map((link) => (
+          <p
+            className="text-sm text-white mx-6 whitespace-nowrap 
+            hover:cursor-pointer hover:font-bold hover:underline 
+            hover:underline-offset-4"
+            key={link.key}
+          >
+            <Link to={link.path}>{link.title}</Link>
           </p>
         ))}
       </div>
