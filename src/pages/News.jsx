@@ -1,15 +1,33 @@
 import React from "react";
+import ImageCard from "../components/Shared/ImageCard";
 import Tabs from "../components/Shared/Tabs";
 import AppLayout from "../layouts/AppLayout";
 
 const News = () => {
-  const [selectedTab, setSelectedTab] = React.useState(1);
+  const [selectedTab, setSelectedTab] = React.useState({
+    id: 1,
+    title: "adventure travel",
+  });
+  const [images, setImages] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch(
+      process.env.REACT_APP_PIXABAY_URL +
+        "&q=" +
+        encodeURIComponent(selectedTab ? selectedTab.title : "adventure travel")
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setImages(data.hits);
+      })
+      .catch((err) => console.error(err));
+  }, [selectedTab]);
 
   const tabs = [
     { id: 1, title: "adventure travel" },
     { id: 2, title: "beach" },
     { id: 3, title: "explore world" },
-    { id: 4, title: "art and culture" },
+    { id: 4, title: "art & culture" },
     { id: 5, title: "family holidays" },
   ];
   return (
@@ -27,6 +45,8 @@ const News = () => {
           <div className="mt-3 mb-10 flex justify-center">
             <Tabs tabs={tabs} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
           </div>
+          {images?.length &&
+            images.map((image) => <ImageCard image={image} key={image.id} />)}
         </>
       </AppLayout>
     </div>
