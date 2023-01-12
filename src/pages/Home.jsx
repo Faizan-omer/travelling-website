@@ -4,7 +4,7 @@ import AppLayout from "../layouts/AppLayout";
 const Home = () => {
   return (
     <div className=" h-full w-full">
-      <AppLayout renderBg={true}></AppLayout>
+      <AppLayout></AppLayout>
     </div>
   );
 };

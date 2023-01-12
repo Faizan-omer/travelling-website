@@ -1,13 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { navbarLinks } from "../../constants/navbar.links";
+import { HOME } from "../../constants/routes";
 
-const Navbar = ({ renderBg }) => {
+const Navbar = ({ pathname }) => {
   return (
-    <div className={`flex w-full ${renderBg ? "text-white" : "text-black"}`}>
+    <div
+      className={`flex w-full ${
+        pathname === HOME ? "text-white" : "text-black"
+      } px-2 py-2`}
+    >
       <div className="flex justify-start w-full">
         <p
-          className={`text-xl ${renderBg ? "text-slate-200" : "text-lime-900"} font-bold`}
+          className={`text-xl ${
+            pathname === HOME ? "text-slate-200" : "text-lime-900"
+          } font-bold`}
         >
           Travely
         </p>

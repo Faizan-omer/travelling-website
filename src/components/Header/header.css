@@ -1,3 +1,7 @@
 .bg-img {
   background-image: url("../../assets//images/header-bg.png");
 }
+
+.bg-img-contact {
+  background-image: url("../../assets//images/contactusheader.jpg");
+}
