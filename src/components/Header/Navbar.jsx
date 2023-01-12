@@ -13,8 +13,8 @@ const Navbar = ({ pathname }) => {
       <div className="flex justify-start w-full">
         <p
           className={`text-xl ${
-            pathname === HOME ? "text-slate-200" : "text-lime-900"
-          } font-bold`}
+            pathname === HOME ? "text-slate-200" : "text-[#43B97F]"
+          } font-mono font-bold`}
         >
           Traveli
         </p>
@@ -35,8 +35,8 @@ const Navbar = ({ pathname }) => {
           </p>
         ))}
       </div>
-      <div className="flex justify-end w-full">
-        <p>Logout</p>
+      <div className={`flex justify-end w-full ${pathname !== HOME && "text-[#43B97F]"}`}>
+        <p>2023</p>
       </div>
     </div>
   );

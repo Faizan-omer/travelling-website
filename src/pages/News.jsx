@@ -11,7 +11,6 @@ const News = () => {
   const [images, setImages] = React.useState([]);
 
   React.useEffect(() => {
-    console.log("---------->", selectedTab);
     fetch(
       process.env.REACT_APP_PIXABAY_URL +
         "&q=" +

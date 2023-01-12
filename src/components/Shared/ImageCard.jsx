@@ -1,7 +1,6 @@
 import React from "react";
 
 const ImageCard = ({ image }) => {
-  console.log("-----------<>", image);
   return (
     <img
       src={image.largeImageURL}
