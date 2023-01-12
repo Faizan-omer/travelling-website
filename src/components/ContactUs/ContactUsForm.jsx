@@ -32,7 +32,7 @@ const ContactUsForm = () => {
         </div>
         <button
           type="submit"
-          className="rounded-md bg-green-400 mt-3 w-24 h-10 text-white"
+          className="rounded-md bg-[#43B97F] mt-3 w-24 h-10 text-white"
         >
           Send
         </button>
