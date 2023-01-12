@@ -22,9 +22,13 @@ const Navbar = ({ pathname }) => {
       <div className="flex justify-center w-full">
         {navbarLinks.map((link) => (
           <p
-            className="text-sm mx-6 whitespace-nowrap 
-            hover:cursor-pointer hover:font-bold hover:underline 
-            hover:underline-offset-4"
+            className={`${
+              link.path === pathname && pathname !== HOME
+                ? " text-[#43B97F] font-bold"
+                : " hover:font-bold hover:underline hover:underline-offset-4 "
+            }
+            text-sm mx-6 whitespace-nowrap 
+            hover:cursor-pointer `}
             key={link.key}
           >
             <Link to={link.path}>{link.title}</Link>

@@ -9,7 +9,7 @@ const Tabs = ({ tabs, selectedTab, setSelectedTab }) => {
           : "text-stone-900"
       }`}
       key={tab.id}
-      onClick={() => setSelectedTab(tab.id)}
+      onClick={() => setSelectedTab(tab)}
     >
       <p className="font-bold capitalize">{tab.title}</p>
     </div>

@@ -11,10 +11,12 @@ const News = () => {
   const [images, setImages] = React.useState([]);
 
   React.useEffect(() => {
+    console.log("---------->", selectedTab);
     fetch(
       process.env.REACT_APP_PIXABAY_URL +
         "&q=" +
-        encodeURIComponent(selectedTab ? selectedTab.title : "adventure travel")
+        encodeURIComponent(selectedTab ? selectedTab.title : "adventure travel") +
+        "&per_page=12",
     )
       .then((res) => res.json())
       .then((data) => {
@@ -27,14 +29,13 @@ const News = () => {
     { id: 1, title: "adventure travel" },
     { id: 2, title: "beach" },
     { id: 3, title: "explore world" },
-    { id: 4, title: "art & culture" },
-    { id: 5, title: "family holidays" },
+    { id: 4, title: "family holidays" },
   ];
   return (
     <div className=" h-full w-full">
       <AppLayout>
         <>
-          <div className="flex justify-center py-8">
+          <div className="flex justify-center py-8 ">
             <div className="flex flex-col">
               <p className="self-center font-bold text-xl text-stone-900">
                 Traveli Archives
@@ -45,8 +46,13 @@ const News = () => {
           <div className="mt-3 mb-10 flex justify-center">
             <Tabs tabs={tabs} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
           </div>
-          {images?.length &&
-            images.map((image) => <ImageCard image={image} key={image.id} />)}
+          <div className="flex flex-wrap justify-center mb-12">
+            {images?.length > 0 ? (
+              images.map((image) => <ImageCard image={image} key={image.id} />)
+            ) : (
+              <p>No results found !</p>
+            )}
+          </div>
         </>
       </AppLayout>
     </div>
