@@ -16,9 +16,9 @@ const ContactUs = () => {
             </p>
             <ContactUsForm />
           </div>
-          <div className="flex flex-col flex-1">
-            <img src={mapImage} alt="" className="h-3/4 object-fit-cover" />
-            <div className="flex flex-col mt-2">
+          <div className="flex flex-col flex-1 ml-4">
+            <img src={mapImage} alt="" className="h-3/5 w-4/5 object-fit-cover" />
+            <div className="flex flex-col mt-2 text-slate-900">
               <p>
                 <span className="font-bold">City:</span>
                 <span className="ml-4">Karachi</span>
@@ -29,7 +29,7 @@ const ContactUs = () => {
               </p>
               <p>
                 <span className="font-bold">Phone:</span>
-                <span className="ml-4">+923324598684</span>
+                <span className="ml-4">+123456789</span>
               </p>
             </div>
           </div>
