@@ -24,7 +24,9 @@ const Header = () => {
       ) : null}
       {location.pathname === HOME && (
         <div className="flex flex-col justify-center items-center h-full">
-          <p className="text-3xl text-white font-mono">Explore the world with a smile</p>
+          <p className="text-3xl text-white font-medium">
+            Explore the world with a smile
+          </p>
           <p className="text-xl text-white">Your journey begins with us!</p>
           <div className="mt-8" />
           <SearchBar />

@@ -7,7 +7,7 @@ import Socials from "./Socials";
 
 const Footer = () => {
   return (
-    <div className="w-full text-white text-sm bg-[#295943] py-7 px-10">
+    <div className="w-full text-white text-sm bg-[#295943] py-7 px-10 ">
       <div className="flex justify-between">
         <Description />
         <Links />

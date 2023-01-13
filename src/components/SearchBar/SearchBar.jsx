@@ -19,7 +19,7 @@ const SearchBar = () => {
           <p className="ml-2">Person</p>
         </div>
         <div className="basis-[24%] bg-[#43B97F] h-8 rounded-md text-white px-2 items-center">
-          <div className="flex justify-between items-center h-full">
+          <div className="flex justify-between items-center h-full hover:cursor-pointer">
             <p>Find trip now</p> <img src={searchPng} alt="" className="w-4 h-4" />
           </div>
         </div>
