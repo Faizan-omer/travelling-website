@@ -16,7 +16,7 @@ const Navbar = ({ pathname }) => {
             pathname === HOME ? "text-slate-200" : "text-[#43B97F]"
           } font-mono font-bold`}
         >
-          Traveli
+          Traveliner
         </p>
       </div>
       <div className="flex justify-center w-full">

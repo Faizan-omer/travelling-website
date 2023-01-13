@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import "./header.css";
 import { useLocation } from "react-router-dom";
-import { CONTACT_US, HOME, NEWS } from "../../constants/routes";
+import { CONTACT_US, DISCOVER, HOME, NEWS } from "../../constants/routes";
 import { SearchBar } from "../SearchBar";
 const Header = () => {
   let location = useLocation();
@@ -20,6 +20,10 @@ const Header = () => {
       ) : location.pathname === NEWS ? (
         <div className="bg-img-news bg-cover bg-center h-64 flex flex-col justify-end">
           <h2 className="text-white text-4xl font-bold mb-8 ml-8">Our News</h2>
+        </div>
+      ) : location.pathname === DISCOVER ? (
+        <div className="bg-img-discover bg-cover bg-center h-64 flex flex-col justify-end">
+          <h2 className="text-white text-4xl font-bold mb-8 ml-8">Discover</h2>
         </div>
       ) : null}
       {location.pathname === HOME && (

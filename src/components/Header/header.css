@@ -9,3 +9,7 @@
 .bg-img-news {
   background-image: url("../../assets//images/newsheader.jpg");
 }
+
+.bg-img-discover {
+  background-image: url("../../assets//images/discoverheader.jpg");
+}

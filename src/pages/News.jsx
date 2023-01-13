@@ -37,7 +37,7 @@ const News = () => {
           <div className="flex justify-center py-8 ">
             <div className="flex flex-col">
               <p className="self-center font-bold text-xl text-stone-900">
-                Traveli Archives
+                Traveliner Archives
               </p>
               <p className="text-lg">Some images from our visits around the world</p>
             </div>
